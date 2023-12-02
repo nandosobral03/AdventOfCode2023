@@ -1,6 +1,6 @@
 const fs = require('fs');
 const numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
-
+const day = 1;
 
 const part1 = async (filename: string) => {
     const lines = fs.readFileSync(filename, { encoding: 'utf-8' }).split('\n');
@@ -27,8 +27,8 @@ const part2 = async (filename: string) => {
 
 const run = async (test: boolean) => {
     return {
-        p1: await part1(test ? './1/test1.txt' : './1/input.txt'),
-        p2: await part2(test ? './1/test2.txt' : './1/input.txt')
+        p1: await part1(test ? `./${day}/test1.txt` : `./${day}/input.txt`),
+        p2: await part2(test ? `./${day}/test2.txt` : `./${day}/input.txt`)
     }
 }
 

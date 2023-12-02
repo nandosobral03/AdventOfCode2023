@@ -1,4 +1,6 @@
 const fs = require('fs');
+const day = 2;
+
 
 type Game = {
     id: number,
@@ -66,9 +68,8 @@ const part2 = async (filename: string) => {
 
 const run = async (test: boolean) => {
     return {
-        p1: await part1(test ? './2/test.txt' : './2/input.txt'),
-        p2: await part2(test ? './2/test.txt' : './2/input.txt')
-    
+        p1: await part1(test ? `./${day}/test.txt` : `./${day}/input.txt`),
+        p2: await part2(test ? `./${day}/test.txt` : `./${day}/input.txt`)
     }
 }
 
